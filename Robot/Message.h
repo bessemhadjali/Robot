@@ -10,5 +10,7 @@
 
 @interface Message : NSObject
 
-
+@property (strong, nonatomic) NSString* text;
+@property (strong, nonatomic) NSString* date;
+@property (nonatomic) NSInteger creatorType;
 @end
