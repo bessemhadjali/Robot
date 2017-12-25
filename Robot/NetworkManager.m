@@ -8,6 +8,32 @@
 
 #import "NetworkManager.h"
 
+@interface NetworkManager()
+
+@end
+
 @implementation NetworkManager
+
+#pragma mark -
+#pragma mark Constructors
+
+static NetworkManager *sharedManager = nil;
+
++ (NetworkManager*)sharedManager {
+    static dispatch_once_t once;
+    dispatch_once(&once, ^
+                  {
+                      sharedManager = [[NetworkManager alloc] init];
+                  });
+    return sharedManager;
+}
+
+- (id)init {
+    if ((self = [super init])) {
+    }
+    return self;
+}
+
+
 
 @end
