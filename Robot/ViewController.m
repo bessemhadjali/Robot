@@ -19,6 +19,10 @@
 
 @property (weak, nonatomic) IBOutlet UIView *sendMessageContainer;
 
+@property (weak, nonatomic) IBOutlet UITextView *textViewMessage;
+
+- (IBAction)SendMessageAction:(id)sender;
+
 @end
 
 @implementation ViewController
@@ -27,10 +31,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+     conversationArray =[[NSMutableArray alloc] init];
     [self createConversationArray];
     
     self.messageTableView.delegate =self;
     self.messageTableView.dataSource = self;
+    
+    
+   
+
     
     NSLog(@"conversationArray count %lu",(unsigned long)conversationArray.count);
 }
@@ -44,7 +54,7 @@
 -(void) createConversationArray
 
 {
-    conversationArray = [[NSMutableArray alloc] init];
+    
     
     for (int i=0; i<10; i++) {
          Message* msg = [[Message alloc] init];
@@ -145,7 +155,42 @@
 }
 
 
+-(void) messageGnerator:(NSString*) text
+{
+        Message* msg =[[Message alloc] init];
+    msg.text = text;
+    msg.creatorType =1;
+    msg.date = @"00:01";
+    [conversationArray addObject:msg];
+    
+    Message* msgg =[[Message alloc] init];
+    msgg.text = @":P :) ;)";
+    msgg.creatorType =2;
+    msgg.date = @"00:02";
+    
+    [conversationArray addObject:msgg];
+    
+    
+}
 
 
+- (IBAction)SendMessageAction:(id)sender {
+    
+    [self messageGnerator:self.textViewMessage.text];
+    
+    [self.messageTableView reloadData];
+    
+    [self scrollToBottomAnimated:YES];
+}
 
+
+- (void)scrollToBottomAnimated:(BOOL)animated
+{
+    NSInteger bottomRow = [conversationArray count] - 1;
+    if (bottomRow >= 0) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:bottomRow inSection:0];
+        [self.messageTableView scrollToRowAtIndexPath:indexPath
+                              atScrollPosition:UITableViewScrollPositionBottom animated:animated];
+    }
+}
 @end

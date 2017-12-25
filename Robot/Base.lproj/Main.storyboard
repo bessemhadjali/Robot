@@ -28,9 +28,30 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyK-B0-mdV">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGF-eh-LKP">
+                                        <rect key="frame" x="331" y="15" width="36" height="30"/>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="SendMessageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cy6-BG-cSf"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hCt-rN-jc5">
+                                        <rect key="frame" x="8" y="8" width="315" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="hCt-rN-jc5" firstAttribute="leading" secondItem="gyK-B0-mdV" secondAttribute="leading" constant="8" id="Bf9-gH-K8u"/>
+                                    <constraint firstItem="xGF-eh-LKP" firstAttribute="leading" secondItem="hCt-rN-jc5" secondAttribute="trailing" constant="8" id="CkT-A3-WeF"/>
+                                    <constraint firstItem="xGF-eh-LKP" firstAttribute="centerY" secondItem="gyK-B0-mdV" secondAttribute="centerY" id="OS8-QF-J3y"/>
+                                    <constraint firstAttribute="trailing" secondItem="xGF-eh-LKP" secondAttribute="trailing" constant="8" id="Qu2-lT-zXO"/>
                                     <constraint firstAttribute="height" constant="60" id="VgF-3Z-jbT"/>
+                                    <constraint firstAttribute="bottom" secondItem="hCt-rN-jc5" secondAttribute="bottom" constant="8" id="fXF-7V-r0m"/>
+                                    <constraint firstItem="hCt-rN-jc5" firstAttribute="top" secondItem="gyK-B0-mdV" secondAttribute="top" constant="8" id="qsm-qZ-oaA"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -49,6 +70,7 @@
                     <connections>
                         <outlet property="messageTableView" destination="Lol-Gj-w90" id="sUg-Qz-iBd"/>
                         <outlet property="sendMessageContainer" destination="gyK-B0-mdV" id="z7d-hg-4Pa"/>
+                        <outlet property="textViewMessage" destination="hCt-rN-jc5" id="cVY-YN-bcc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
