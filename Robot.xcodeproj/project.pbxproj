@@ -13,6 +13,7 @@
 		FA5664201FF1935000F30BED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA56641E1FF1935000F30BED /* Main.storyboard */; };
 		FA5664221FF1935000F30BED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5664211FF1935000F30BED /* Assets.xcassets */; };
 		FA5664251FF1935000F30BED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5664231FF1935000F30BED /* LaunchScreen.storyboard */; };
+		FA56642E1FF193D800F30BED /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = FA56642D1FF193D800F30BED /* Message.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		FA5664211FF1935000F30BED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5664241FF1935000F30BED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5664261FF1935000F30BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA56642C1FF193D800F30BED /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		FA56642D1FF193D800F30BED /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				FA5664231FF1935000F30BED /* LaunchScreen.storyboard */,
 				FA5664261FF1935000F30BED /* Info.plist */,
 				FA5664151FF1935000F30BED /* Supporting Files */,
+				FA56642C1FF193D800F30BED /* Message.h */,
+				FA56642D1FF193D800F30BED /* Message.m */,
 			);
 			path = Robot;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA56641D1FF1935000F30BED /* ViewController.m in Sources */,
+				FA56642E1FF193D800F30BED /* Message.m in Sources */,
 				FA56641A1FF1935000F30BED /* AppDelegate.m in Sources */,
 				FA5664171FF1935000F30BED /* main.m in Sources */,
 			);
