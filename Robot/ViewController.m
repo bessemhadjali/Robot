@@ -33,7 +33,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
      conversationArray =[[NSMutableArray alloc] init];
-    [self createConversationArray];
+    //[self createConversationArray];
     
     self.messageTableView.delegate =self;
     self.messageTableView.dataSource = self;
@@ -80,11 +80,6 @@
 }
 
 #pragma mark - UITableViewDatasource methods
--(void)awakeFromNib {
-    
-    
-    [super awakeFromNib];
-}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

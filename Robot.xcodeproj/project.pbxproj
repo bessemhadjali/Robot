@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA92BCF529EA1842106DEC65 /* libPods-Robot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 889F27EB89B9BE70CEFEDBDF /* libPods-Robot.a */; };
 		FA5664171FF1935000F30BED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5664161FF1935000F30BED /* main.m */; };
 		FA56641A1FF1935000F30BED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5664191FF1935000F30BED /* AppDelegate.m */; };
 		FA56641D1FF1935000F30BED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA56641C1FF1935000F30BED /* ViewController.m */; };
@@ -15,9 +16,13 @@
 		FA5664251FF1935000F30BED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5664231FF1935000F30BED /* LaunchScreen.storyboard */; };
 		FA56642E1FF193D800F30BED /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = FA56642D1FF193D800F30BED /* Message.m */; };
 		FA5664311FF19C8E00F30BED /* PTSMessagingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5664301FF19C8E00F30BED /* PTSMessagingCell.m */; };
+		FA5664351FF1C57900F30BED /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5664341FF1C57900F30BED /* NetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		889F27EB89B9BE70CEFEDBDF /* libPods-Robot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Robot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B54F6D55DE2BFE3050C6E858 /* Pods-Robot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Robot/Pods-Robot.release.xcconfig"; sourceTree = "<group>"; };
+		E6D6BA49204D4CA729D92446 /* Pods-Robot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Robot/Pods-Robot.debug.xcconfig"; sourceTree = "<group>"; };
 		FA5664121FF1935000F30BED /* Robot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Robot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5664161FF1935000F30BED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA5664181FF1935000F30BED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -32,6 +37,8 @@
 		FA56642D1FF193D800F30BED /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		FA56642F1FF19C8E00F30BED /* PTSMessagingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTSMessagingCell.h; sourceTree = "<group>"; };
 		FA5664301FF19C8E00F30BED /* PTSMessagingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTSMessagingCell.m; sourceTree = "<group>"; };
+		FA5664331FF1C57900F30BED /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		FA5664341FF1C57900F30BED /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +46,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA92BCF529EA1842106DEC65 /* libPods-Robot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E35CC380A58515FDD62ECBAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				889F27EB89B9BE70CEFEDBDF /* libPods-Robot.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F87D2A0A6E54E3A6D5B627A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6D6BA49204D4CA729D92446 /* Pods-Robot.debug.xcconfig */,
+				B54F6D55DE2BFE3050C6E858 /* Pods-Robot.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FA5664091FF1934E00F30BED = {
 			isa = PBXGroup;
 			children = (
 				FA5664141FF1935000F30BED /* Robot */,
 				FA5664131FF1935000F30BED /* Products */,
+				F87D2A0A6E54E3A6D5B627A6 /* Pods */,
+				E35CC380A58515FDD62ECBAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +91,7 @@
 		FA5664141FF1935000F30BED /* Robot */ = {
 			isa = PBXGroup;
 			children = (
+				FA5664321FF1C4FB00F30BED /* Api */,
 				FA5664181FF1935000F30BED /* AppDelegate.h */,
 				FA5664191FF1935000F30BED /* AppDelegate.m */,
 				FA56641B1FF1935000F30BED /* ViewController.h */,
@@ -89,6 +117,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FA5664321FF1C4FB00F30BED /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				FA5664331FF1C57900F30BED /* NetworkManager.h */,
+				FA5664341FF1C57900F30BED /* NetworkManager.m */,
+			);
+			name = Api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA5664291FF1935000F30BED /* Build configuration list for PBXNativeTarget "Robot" */;
 			buildPhases = (
+				BEDF0E41C7B0CCBECCC5720D /* [CP] Check Pods Manifest.lock */,
 				FA56640E1FF1934F00F30BED /* Sources */,
 				FA56640F1FF1934F00F30BED /* Frameworks */,
 				FA5664101FF1934F00F30BED /* Resources */,
+				80DE3C50E21E47564D46A9B8 /* [CP] Embed Pods Frameworks */,
+				EF7244D49017AA69AF0A54BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +196,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		80DE3C50E21E47564D46A9B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Robot/Pods-Robot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEDF0E41C7B0CCBECCC5720D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF7244D49017AA69AF0A54BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Robot/Pods-Robot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA56640E1FF1934F00F30BED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -165,6 +253,7 @@
 				FA5664311FF19C8E00F30BED /* PTSMessagingCell.m in Sources */,
 				FA56642E1FF193D800F30BED /* Message.m in Sources */,
 				FA56641A1FF1935000F30BED /* AppDelegate.m in Sources */,
+				FA5664351FF1C57900F30BED /* NetworkManager.m in Sources */,
 				FA5664171FF1935000F30BED /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +370,7 @@
 		};
 		FA56642A1FF1935000F30BED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6D6BA49204D4CA729D92446 /* Pods-Robot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SKM6383J4N;
@@ -293,6 +383,7 @@
 		};
 		FA56642B1FF1935000F30BED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B54F6D55DE2BFE3050C6E858 /* Pods-Robot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SKM6383J4N;
@@ -322,6 +413,7 @@
 				FA56642B1FF1935000F30BED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
