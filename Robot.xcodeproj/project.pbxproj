@@ -17,6 +17,7 @@
 		FA56642E1FF193D800F30BED /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = FA56642D1FF193D800F30BED /* Message.m */; };
 		FA5664311FF19C8E00F30BED /* PTSMessagingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5664301FF19C8E00F30BED /* PTSMessagingCell.m */; };
 		FA5664351FF1C57900F30BED /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5664341FF1C57900F30BED /* NetworkManager.m */; };
+		FA5664381FF1CF8200F30BED /* BotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5664371FF1CF8200F30BED /* BotManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		FA5664301FF19C8E00F30BED /* PTSMessagingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTSMessagingCell.m; sourceTree = "<group>"; };
 		FA5664331FF1C57900F30BED /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		FA5664341FF1C57900F30BED /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		FA5664361FF1CF8200F30BED /* BotManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BotManager.h; sourceTree = "<group>"; };
+		FA5664371FF1CF8200F30BED /* BotManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BotManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 			children = (
 				FA5664331FF1C57900F30BED /* NetworkManager.h */,
 				FA5664341FF1C57900F30BED /* NetworkManager.m */,
+				FA5664361FF1CF8200F30BED /* BotManager.h */,
+				FA5664371FF1CF8200F30BED /* BotManager.m */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5664381FF1CF8200F30BED /* BotManager.m in Sources */,
 				FA56641D1FF1935000F30BED /* ViewController.m in Sources */,
 				FA5664311FF19C8E00F30BED /* PTSMessagingCell.m in Sources */,
 				FA56642E1FF193D800F30BED /* Message.m in Sources */,

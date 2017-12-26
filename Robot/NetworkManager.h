@@ -9,11 +9,22 @@
 
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
 
+
+@protocol MessageSendProtocol;
 @interface NetworkManager : NSObject
+@property (nonatomic, weak) id<MessageSendProtocol>delegate;
 
 + (id)sharedManager;
 
+-(void) sendMessage:(NSString*)text;
+
+
+@end
+
+@protocol MessageSendProtocol <NSObject>
+@optional
+-(void)sendMessageDidUpdateWithWeather:(NSArray*)messagesArray;
+-(void)sendMessageDidFailWithError:(NSString*)raisonFail;
 @end
 

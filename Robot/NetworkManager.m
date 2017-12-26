@@ -7,12 +7,17 @@
 //
 
 #import "NetworkManager.h"
+#import "BotManager.h"
 
-@interface NetworkManager()
+@interface NetworkManager(){
+    
+    BotManager* botManager;
+}
 
 @end
 
 @implementation NetworkManager
+
 
 #pragma mark -
 #pragma mark Constructors
@@ -30,8 +35,28 @@ static NetworkManager *sharedManager = nil;
 
 - (id)init {
     if ((self = [super init])) {
+        
+        botManager = [[BotManager alloc] init];
     }
     return self;
+}
+
+-(void) sendMessage:(NSString*)text
+{
+    
+    [botManager sendMessage:text success:^(id responseObject) {
+        
+        NSArray* array = [[NSArray alloc] init];
+        
+        [self.delegate sendMessageDidUpdateWithWeather:array];
+        
+        
+    } failure:^(NSString *failureReason, NSInteger statusCode) {
+        
+        [self.delegate sendMessageDidFailWithError:failureReason];
+        
+    }];
+    
 }
 
 
